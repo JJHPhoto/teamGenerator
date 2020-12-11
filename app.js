@@ -10,6 +10,140 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+const employeeList = [];
+
+//Ask for manager info: name, id, email, office number.
+function askForManagerInfo() {
+  return inquirer
+    .prompt([
+      {
+        message: "What is your name?",
+        name: "name",
+        type: "input",
+      },
+      {
+        message: "What is your ID?",
+        name: "id",
+        type: "input",
+      },
+      {
+        message: "What is your email?",
+        name: "email",
+        type: "input",
+      },
+      {
+        message: "What is your office number?",
+        name: "officeNumber",
+        type: "input",
+      },
+    ])
+    .then((managerData) => {
+      const newManager = new Manager(
+        managerData.name,
+        managerData.id,
+        managerData.email,
+        managerData.officeNumber
+      );
+
+      employeeList.push(newManager);
+      writeHTMLFile();
+      //Restart here!
+      // askForEmployeeRole();
+    });
+}
+
+//Ask user for next employee type: 3 options(engineer, intern, no more team members)
+
+function askForEmployeeRole() {
+  return inquirer
+    .prompt([
+      {
+        message: "What role?",
+        name: "name",
+        type: "list",
+        choices: ["Engineer", "Intern", "No more employees needed"],
+      },
+    ])
+    .then((newEmployeeRoles) => {
+      if ("Engineer") {
+        //if they select engineer
+        askForEngineerInfo();
+      }
+      if ("Intern") {
+        //else if they select intern
+        askForInternInfo();
+      }
+      if ("No more employees needed") {
+        writeHTMLFile();
+        // const renderHTMLContent = render(employeeList);
+      }
+
+      //else end the application.
+    });
+}
+
+//After adding engineer
+//Ask user for engineer info (name, id, email, github)
+function askForEngineerInfo() {
+  return inquirer
+    .prompt([
+      {
+        message: "What is your name?",
+        name: "name",
+        type: "input",
+      },
+      {
+        message: "What is your ID?",
+        name: "id",
+        type: "input",
+      },
+      {
+        message: "What is your email?",
+        name: "email",
+        type: "input",
+      },
+      {
+        message: "What is your Github?",
+        name: "github",
+        type: "input",
+      },
+    ])
+    .then((engineerData) => {
+      const newEngineer = new Engineer(
+        engineerData.name,
+        engineerData.id,
+        engineerData.email,
+        engineerData.github
+      );
+      employeeList.push(newManager);
+      askForEmployeeRole();
+    });
+}
+//After adding intern
+//Ask user for intern info (name, id, email, school)
+function askForInternInfo() {
+  return inquirer
+    .prompt([
+      {
+        message: "What is your name?",
+        name: "name",
+        type: "input",
+      },
+    ])
+    .then((response) => {});
+}
+
+askForManagerInfo();
+
+function writeHTMLFile() {
+  const createHTML = render(employeeList);
+
+  fs.writeFile(outputPath, createHTML, (err) => {
+    if (err) throw err;
+
+    // console.log(employeeList);
+  });
+}
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
