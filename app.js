@@ -44,11 +44,12 @@ function askForManagerInfo() {
         managerData.email,
         managerData.officeNumber
       );
+      console.log(newManager);
 
       employeeList.push(newManager);
-      writeHTMLFile();
+      // writeHTMLFile();
       //Restart here!
-      // askForEmployeeRole();
+      askForEmployeeRole();
     });
 }
 
@@ -58,26 +59,27 @@ function askForEmployeeRole() {
   return inquirer
     .prompt([
       {
-        message: "What role?",
-        name: "name",
+        message: "What is your role?",
+        name: "role",
         type: "list",
         choices: ["Engineer", "Intern", "No more employees needed"],
       },
     ])
-    .then((newEmployeeRoles) => {
-      if ("Engineer") {
+    .then((answer) => {
+      console.log(answer.role);
+      if (answer.role === "Engineer") {
         //if they select engineer
         askForEngineerInfo();
       }
-      if ("Intern") {
+      if (answer.role === "Intern") {
         //else if they select intern
         askForInternInfo();
       }
-      if ("No more employees needed") {
+      if (answer.role === "No more employees needed") {
         writeHTMLFile();
         // const renderHTMLContent = render(employeeList);
       }
-
+      // console.log("the end");
       //else end the application.
     });
 }
@@ -88,7 +90,7 @@ function askForEngineerInfo() {
   return inquirer
     .prompt([
       {
-        message: "What is your name?",
+        message: "What is your full name?",
         name: "name",
         type: "input",
       },
@@ -115,7 +117,7 @@ function askForEngineerInfo() {
         engineerData.email,
         engineerData.github
       );
-      employeeList.push(newManager);
+      employeeList.push(newEngineer);
       askForEmployeeRole();
     });
 }
@@ -129,8 +131,32 @@ function askForInternInfo() {
         name: "name",
         type: "input",
       },
+      {
+        message: "What is your ID?",
+        name: "id",
+        type: "input",
+      },
+      {
+        message: "What is your email?",
+        name: "email",
+        type: "input",
+      },
+      {
+        message: "What school did you go to?",
+        name: "school",
+        type: "input",
+      },
     ])
-    .then((response) => {});
+    .then((internData) => {
+      const newIntern = new Intern(
+        internData.name,
+        internData.id,
+        internData.email,
+        internData.school
+      );
+      employeeList.push(newIntern);
+      askForEmployeeRole();
+    });
 }
 
 askForManagerInfo();
