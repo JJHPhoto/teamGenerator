@@ -68,19 +68,14 @@ function askForEmployeeRole() {
     .then((answer) => {
       console.log(answer.role);
       if (answer.role === "Engineer") {
-        //if they select engineer
         askForEngineerInfo();
       }
       if (answer.role === "Intern") {
-        //else if they select intern
         askForInternInfo();
       }
       if (answer.role === "No more employees needed") {
         writeHTMLFile();
-        // const renderHTMLContent = render(employeeList);
       }
-      // console.log("the end");
-      //else end the application.
     });
 }
 

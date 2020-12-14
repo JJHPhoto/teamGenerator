@@ -19,15 +19,22 @@
 
 ## Workflow
 
-I have to say that this homework assignment was the funnest one I've had! It was mostly fun because I did this with my study group and it was a TON of fun to progress through the tests, outputting a file and fixing errors.
+I have to say that this homework assignment was the funnest one I've had! It was mostly fun because I did this with my study group. It was a TON of fun to progress through the tests, outputting a file and fixing errors.
 
-- tests with study group
-- writing file with study group
-- tutor time fixed my .then if.
-- styled with bootstrap classes
-- README formatting from Zac
+The first thing we did was get one test to work. We then tried to finish the entire suite before moving on to a new suite. This was the fun part! Seeing each passed test and then figuring out how to get the next one to pass.
+
+Next we worked on writing the file. One member of our study group had most of it working but was missing something. Another member pointed out a variable that was incorrect. I happened to be taking a screenshot to try out the writing file code as he ran his code again. There's this big smile on all of our faces as we saw his code work!
+
+Next I worked on a bit of code with my tutor. My tutor pointed out some flaws in my code. These flaws were breaking me out of what I was trying to do and creating errors. I really enjoyed this tutoring session because I was able to figure out how to fix my code based on questions my tutor was asking me. It really felt like I was making progress. My tutor noted that I was getting the concepts but that I was going down a few rabbit holes. Which were creating my errors.
+
+The last thing to do was styling the generated page. I wanted to make it look nicer than the basic template that was being generated. Around that same time, [Zac](https://github.com/themancalledzac) (a study group member) pointed our group to a nice way to style our README markdowns using [Shields.io](https://shields.io/). I decided to impliment this at the same time as using Bootstrap's class styles.
+
+Actually, the last thing to dow as record how the application works using [Screencastify](https://www.screencastify.com/). But who's keeping track of that. Oh wait, I am.
 
 ## Application Demo
+
+- gif
+- link to video
 
 ## Technologies Used
 
@@ -41,7 +48,8 @@ I have to say that this homework assignment was the funnest one I've had! It was
 
 ## Resources
 
-### To dos
+[Shields.io](https://shields.io/)
 
-- validation to ensure the information provided is the proper format
-- add application to my portfolio
+[Font Awesome](https://fontawesome.com/)
+
+[Screencastify](https://www.screencastify.com/)
