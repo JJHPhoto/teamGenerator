@@ -54,3 +54,10 @@ To watch a video of the application being fully demo'd please use this link: [Ap
 [Font Awesome](https://fontawesome.com/)
 
 [Screencastify](https://www.screencastify.com/)
+
+My Study Group
+
+- [Ian](https://github.com/Ianaac27)
+- [Macz](https://github.com/macz-norton)
+- [Thomas](https://github.com/Tskading)
+- [Zac](https://github.com/themancalledzac)
