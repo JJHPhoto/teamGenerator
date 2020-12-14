@@ -33,8 +33,9 @@ Actually, the last thing to dow as record how the application works using [Scree
 
 ## Application Demo
 
-- gif
-- link to video
+![](appDemo.gif)
+
+To watch a video of the application being fully demo'd please use this link: [Application Demo](https://drive.google.com/file/d/14dxWruI9h-0lYy3zvYQpvkIcdiAi3Orn/view).
 
 ## Technologies Used
 
