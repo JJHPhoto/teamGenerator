@@ -29,7 +29,7 @@ Next I worked on a bit of code with my tutor. My tutor pointed out some flaws in
 
 The last thing to do was styling the generated page. I wanted to make it look nicer than the basic template that was being generated. Around that same time, [Zac](https://github.com/themancalledzac) (a study group member) pointed our group to a nice way to style our README markdowns using [Shields.io](https://shields.io/). I decided to impliment this at the same time as using Bootstrap's class styles.
 
-Actually, the last thing to dow as record how the application works using [Screencastify](https://www.screencastify.com/). But who's keeping track of that. Oh wait, I am.
+Actually, the last thing to do was record how the application works using [Screencastify](https://www.screencastify.com/). But who's keeping track of that. Oh wait, I am.
 
 ## Application Demo
 
